@@ -1,0 +1,984 @@
+CRITICAL - 2023-10-18 00:03:07 --> Undefined variable $encuesta
+in APPPATH/Views/pregunta/index.php on line 11.
+ 1 APPPATH/Views/pregunta/index.php(11): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/run/media/degante/DEVELOPMENT/dev/encuesta/app/Views/pregunta/index.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/PreguntaController.php(13): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-18 00:15:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 00:15:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-18 00:15:40 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`upn212encuesta`.`opciones`, CONSTRAINT `opciones_ibfk_1` FOREIGN KEY (`pregunta_id`) REFERENCES `preguntas` (`id`)) in /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query()
+#4 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /run/media/degante/DEVELOPMENT/dev/encuesta/system/BaseModel.php(1080): CodeIgniter\Model->doDelete()
+#6 /run/media/degante/DEVELOPMENT/dev/encuesta/app/Controllers/PreguntaController.php(92): CodeIgniter\BaseModel->delete()
+#7 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(919): App\Controllers\PreguntaController->delete()
+#8 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+#9 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#10 /run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+CRITICAL - 2023-10-18 00:15:40 --> Cannot delete or update a parent row: a foreign key constraint fails (`upn212encuesta`.`opciones`, CONSTRAINT `opciones_ibfk_1` FOREIGN KEY (`pregunta_id`) REFERENCES `preguntas` (`id`))
+in SYSTEMPATH/Database/BaseConnection.php on line 646.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete()
+ 4 APPPATH/Controllers/PreguntaController.php(92): CodeIgniter\BaseModel->delete()
+ 5 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->delete()
+ 6 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-18 00:15:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 00:15:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-18 00:15:58 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`upn212encuesta`.`opciones`, CONSTRAINT `opciones_ibfk_1` FOREIGN KEY (`pregunta_id`) REFERENCES `preguntas` (`id`)) in /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query()
+#4 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /run/media/degante/DEVELOPMENT/dev/encuesta/system/BaseModel.php(1080): CodeIgniter\Model->doDelete()
+#6 /run/media/degante/DEVELOPMENT/dev/encuesta/app/Controllers/PreguntaController.php(92): CodeIgniter\BaseModel->delete()
+#7 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(919): App\Controllers\PreguntaController->delete()
+#8 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+#9 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#10 /run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+CRITICAL - 2023-10-18 00:15:58 --> Cannot delete or update a parent row: a foreign key constraint fails (`upn212encuesta`.`opciones`, CONSTRAINT `opciones_ibfk_1` FOREIGN KEY (`pregunta_id`) REFERENCES `preguntas` (`id`))
+in SYSTEMPATH/Database/BaseConnection.php on line 646.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete()
+ 4 APPPATH/Controllers/PreguntaController.php(92): CodeIgniter\BaseModel->delete()
+ 5 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->delete()
+ 6 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-18 00:17:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 00:18:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 00:25:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 00:25:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-18 00:26:04 --> Attempt to assign property "pregunta" on array
+in APPPATH/Controllers/PreguntaController.php on line 77.
+ 1 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->update()
+ 2 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 00:27:47 --> Attempt to assign property "pregunta" on array
+in APPPATH/Controllers/PreguntaController.php on line 77.
+ 1 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->update()
+ 2 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 00:28:00 --> Attempt to assign property "pregunta" on array
+in APPPATH/Controllers/PreguntaController.php on line 77.
+ 1 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->update()
+ 2 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 00:28:59 --> Attempt to assign property "pregunta" on array
+in APPPATH/Controllers/PreguntaController.php on line 77.
+ 1 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->update()
+ 2 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 00:29:02 --> Undefined array key "tipo"
+in APPPATH/Views/pregunta/edit.php on line 17.
+ 1 APPPATH/Views/pregunta/edit.php(17): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/run/media/degante/DEVELOPMENT/dev/encuesta/app/Views/pregunta/edit.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/PreguntaController.php(55): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->edit()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 00:29:55 --> Undefined array key "tipo"
+in APPPATH/Views/pregunta/edit.php on line 17.
+ 1 APPPATH/Views/pregunta/edit.php(17): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/run/media/degante/DEVELOPMENT/dev/encuesta/app/Views/pregunta/edit.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/PreguntaController.php(55): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->edit()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 00:29:57 --> Undefined array key "tipo"
+in APPPATH/Views/pregunta/edit.php on line 17.
+ 1 APPPATH/Views/pregunta/edit.php(17): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/run/media/degante/DEVELOPMENT/dev/encuesta/app/Views/pregunta/edit.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/PreguntaController.php(55): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->edit()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 00:30:01 --> Undefined array key "tipo"
+in APPPATH/Views/pregunta/edit.php on line 17.
+ 1 APPPATH/Views/pregunta/edit.php(17): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/run/media/degante/DEVELOPMENT/dev/encuesta/app/Views/pregunta/edit.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/PreguntaController.php(55): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->edit()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 00:30:28 --> Attempt to assign property "pregunta" on array
+in APPPATH/Controllers/PreguntaController.php on line 77.
+ 1 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->update()
+ 2 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 00:32:23 --> Attempt to assign property "pregunta" on array
+in APPPATH/Controllers/PreguntaController.php on line 77.
+ 1 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->update()
+ 2 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 00:35:36 --> Attempt to assign property "pregunta" on array
+in APPPATH/Controllers/PreguntaController.php on line 77.
+ 1 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->update()
+ 2 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 00:35:46 --> Attempt to assign property "pregunta" on array
+in APPPATH/Controllers/PreguntaController.php on line 77.
+ 1 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->update()
+ 2 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 00:37:20 --> Attempt to assign property "pregunta" on array
+in APPPATH/Controllers/PreguntaController.php on line 77.
+ 1 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->update()
+ 2 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 00:37:28 --> Attempt to assign property "pregunta" on array
+in APPPATH/Controllers/PreguntaController.php on line 77.
+ 1 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->update()
+ 2 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 00:48:02 --> Undefined array key "tipo"
+in APPPATH/Views/encuesta/preguntas.php on line 37.
+ 1 APPPATH/Views/encuesta/preguntas.php(37): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/run/media/degante/DEVELOPMENT/dev/encuesta/app/Views/encuesta/preguntas.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/EncuestaController.php(121): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\EncuestaController->preguntas()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 00:52:31 --> Invalid file: "pregunta/agregar_opciones.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/PreguntaController.php(109): view()
+ 4 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->agregarOpciones()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-18 00:55:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-18 00:56:56 --> Undefined array key "encuesta_id"
+in APPPATH/Controllers/PreguntaController.php on line 136.
+ 1 APPPATH/Controllers/PreguntaController.php(136): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->guardarOpciones()
+ 3 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 00:59:11 --> Trying to access array offset on value of type null
+in APPPATH/Views/encuesta/preguntas.php on line 16.
+ 1 APPPATH/Views/encuesta/preguntas.php(16): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/run/media/degante/DEVELOPMENT/dev/encuesta/app/Views/encuesta/preguntas.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/EncuestaController.php(121): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\EncuestaController->preguntas()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 01:02:40 --> Invalid file: "preguntas/ver_pregunta.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/PreguntaController.php(150): view()
+ 4 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->ver()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 01:11:38 --> Undefined variable $pregunta_id
+in APPPATH/Views/pregunta/agregar_opciones.php on line 10.
+ 1 APPPATH/Views/pregunta/agregar_opciones.php(10): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/run/media/degante/DEVELOPMENT/dev/encuesta/app/Views/pregunta/agregar_opciones.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/PreguntaController.php(109): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->agregarOpciones()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 01:12:49 --> Undefined variable $pregunta_id
+in APPPATH/Views/pregunta/agregar_opciones.php on line 10.
+ 1 APPPATH/Views/pregunta/agregar_opciones.php(10): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/run/media/degante/DEVELOPMENT/dev/encuesta/app/Views/pregunta/agregar_opciones.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/PreguntaController.php(109): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->agregarOpciones()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 01:12:54 --> Undefined array key "opciones"
+in APPPATH/Views/pregunta/ver_pregunta.php on line 17.
+ 1 APPPATH/Views/pregunta/ver_pregunta.php(17): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/run/media/degante/DEVELOPMENT/dev/encuesta/app/Views/pregunta/ver_pregunta.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/PreguntaController.php(150): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->ver()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 01:14:34 --> Undefined array key "opciones"
+in APPPATH/Views/pregunta/ver_pregunta.php on line 17.
+ 1 APPPATH/Views/pregunta/ver_pregunta.php(17): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/run/media/degante/DEVELOPMENT/dev/encuesta/app/Views/pregunta/ver_pregunta.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/PreguntaController.php(128): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->ver()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 01:14:38 --> Undefined array key "opciones"
+in APPPATH/Views/pregunta/ver_pregunta.php on line 17.
+ 1 APPPATH/Views/pregunta/ver_pregunta.php(17): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/run/media/degante/DEVELOPMENT/dev/encuesta/app/Views/pregunta/ver_pregunta.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/PreguntaController.php(128): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->ver()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 01:15:13 --> Undefined variable $pregunta_id
+in APPPATH/Views/pregunta/agregar_opciones.php on line 10.
+ 1 APPPATH/Views/pregunta/agregar_opciones.php(10): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/run/media/degante/DEVELOPMENT/dev/encuesta/app/Views/pregunta/agregar_opciones.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/PreguntaController.php(109): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->agregarOpciones()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 01:15:38 --> Undefined variable $pregunta_id
+in APPPATH/Views/pregunta/agregar_opciones.php on line 18.
+ 1 APPPATH/Views/pregunta/agregar_opciones.php(18): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/run/media/degante/DEVELOPMENT/dev/encuesta/app/Views/pregunta/agregar_opciones.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/PreguntaController.php(109): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->agregarOpciones()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 01:16:49 --> Too few arguments to function App\Controllers\PreguntaController::guardarOpciones(), 0 passed in /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH/Controllers/PreguntaController.php on line 118.
+ 1 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->guardarOpciones()
+ 2 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 01:26:18 --> foreach() argument must be of type array|object, string given
+in APPPATH/Controllers/PreguntaController.php on line 137.
+ 1 APPPATH/Controllers/PreguntaController.php(137): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->guardarOpciones()
+ 3 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 01:26:35 --> foreach() argument must be of type array|object, string given
+in APPPATH/Controllers/PreguntaController.php on line 137.
+ 1 APPPATH/Controllers/PreguntaController.php(137): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->guardarOpciones()
+ 3 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 01:28:36 --> foreach() argument must be of type array|object, string given
+in APPPATH/Controllers/PreguntaController.php on line 136.
+ 1 APPPATH/Controllers/PreguntaController.php(136): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->guardarOpciones()
+ 3 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 01:30:38 --> foreach() argument must be of type array|object, string given
+in APPPATH/Controllers/PreguntaController.php on line 136.
+ 1 APPPATH/Controllers/PreguntaController.php(136): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->guardarOpciones()
+ 3 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 01:30:52 --> foreach() argument must be of type array|object, string given
+in APPPATH/Controllers/PreguntaController.php on line 136.
+ 1 APPPATH/Controllers/PreguntaController.php(136): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->guardarOpciones()
+ 3 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-18 01:33:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-18 09:20:07 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /run/media/degante/DEVELOPMENT/dev/encuesta/system/BaseModel.php(624): CodeIgniter\Model->doFindAll()
+#6 /run/media/degante/DEVELOPMENT/dev/encuesta/app/Controllers/EncuestaController.php(69): CodeIgniter\BaseModel->findAll()
+#7 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(919): App\Controllers\EncuestaController->index()
+#8 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+#9 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#10 /run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#3 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 /run/media/degante/DEVELOPMENT/dev/encuesta/system/BaseModel.php(624): CodeIgniter\Model->doFindAll()
+#5 /run/media/degante/DEVELOPMENT/dev/encuesta/app/Controllers/EncuestaController.php(69): CodeIgniter\BaseModel->findAll()
+#6 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(919): App\Controllers\EncuestaController->index()
+#7 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+#8 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#9 /run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#10 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Commands/Server/rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2023-10-18 09:20:07 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/EncuestaController.php(69): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\EncuestaController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-18 09:21:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-18 09:25:05 --> syntax error, unexpected token "<", expecting end of file
+in APPPATH/Views/pregunta/ver_opciones.php on line 2.
+ 1 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/PreguntaController.php(186): view()
+ 4 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->verOpciones()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-18 09:28:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-18 12:01:21 --> Call to undefined function endSection()
+in APPPATH/Views/pregunta/ver_opciones.php on line 20.
+ 1 SYSTEMPATH/View/View.php(226): include()
+ 2 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/PreguntaController.php(186): view()
+ 5 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->verOpciones()
+ 6 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-18 21:30:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 21:30:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 21:30:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 21:30:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-10-18 21:30:12 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\UsuarioController::$session is deprecated in APPPATH/Controllers/Admin/UsuarioController.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Admin\UsuarioController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-18 21:50:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 21:50:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-10-18 21:50:04 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\UsuarioController::$session is deprecated in APPPATH/Controllers/Admin/UsuarioController.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Admin\UsuarioController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-18 21:50:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 21:50:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-10-18 21:50:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\UsuarioController::$session is deprecated in APPPATH/Controllers/Admin/UsuarioController.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Admin\UsuarioController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-18 22:14:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 22:14:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 22:14:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 22:14:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 22:15:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 22:16:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 22:17:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 22:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-10-18 22:17:07 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\UsuarioController::$session is deprecated in APPPATH/Controllers/Admin/UsuarioController.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Admin\UsuarioController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-18 22:17:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-10-18 22:17:58 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\UsuarioController::$session is deprecated in APPPATH/Controllers/Admin/UsuarioController.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Admin\UsuarioController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-18 22:18:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-10-18 22:18:35 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\UsuarioController::$session is deprecated in APPPATH/Controllers/Admin/UsuarioController.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Admin\UsuarioController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-18 22:19:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-10-18 22:19:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\UsuarioController::$session is deprecated in APPPATH/Controllers/Admin/UsuarioController.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Admin\UsuarioController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-18 22:19:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-10-18 22:19:47 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\UsuarioController::$session is deprecated in APPPATH/Controllers/Admin/UsuarioController.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Admin\UsuarioController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 23:05:59 --> Undefined array key "nombre"
+in APPPATH/Controllers/EncuestaController.php on line 146.
+ 1 APPPATH/Controllers/EncuestaController.php(146): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\EncuestaController->aplicarEncuesta()
+ 3 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 23:08:08 --> Undefined array key "encuesta_nombre"
+in APPPATH/Controllers/EncuestaController.php on line 146.
+ 1 APPPATH/Controllers/EncuestaController.php(146): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\EncuestaController->aplicarEncuesta()
+ 3 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 23:08:58 --> Undefined array key "tipo"
+in APPPATH/Views/encuesta/aplicar_encuesta.php on line 18.
+ 1 APPPATH/Views/encuesta/aplicar_encuesta.php(18): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/run/media/degante/DEVELOPMENT/dev/encuesta/app/Views/encuesta/aplicar_encuesta.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/EncuestaController.php(144): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\EncuestaController->aplicarEncuesta()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 23:09:30 --> Undefined array key "opciones"
+in APPPATH/Views/encuesta/aplicar_encuesta.php on line 21.
+ 1 APPPATH/Views/encuesta/aplicar_encuesta.php(21): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/run/media/degante/DEVELOPMENT/dev/encuesta/app/Views/encuesta/aplicar_encuesta.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/EncuestaController.php(144): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\EncuestaController->aplicarEncuesta()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 23:10:14 --> Undefined array key "opcion"
+in APPPATH/Views/encuesta/aplicar_encuesta.php on line 21.
+ 1 APPPATH/Views/encuesta/aplicar_encuesta.php(21): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/run/media/degante/DEVELOPMENT/dev/encuesta/app/Views/encuesta/aplicar_encuesta.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/EncuestaController.php(144): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\EncuestaController->aplicarEncuesta()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 23:10:18 --> Undefined array key "opcion"
+in APPPATH/Views/encuesta/aplicar_encuesta.php on line 21.
+ 1 APPPATH/Views/encuesta/aplicar_encuesta.php(21): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/run/media/degante/DEVELOPMENT/dev/encuesta/app/Views/encuesta/aplicar_encuesta.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/EncuestaController.php(144): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\EncuestaController->aplicarEncuesta()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 23:10:59 --> Undefined array key "pregunta_id"
+in APPPATH/Views/encuesta/aplicar_encuesta.php on line 21.
+ 1 APPPATH/Views/encuesta/aplicar_encuesta.php(21): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/run/media/degante/DEVELOPMENT/dev/encuesta/app/Views/encuesta/aplicar_encuesta.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/EncuestaController.php(144): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\EncuestaController->aplicarEncuesta()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 23:12:53 --> Undefined array key "opcion"
+in APPPATH/Views/encuesta/aplicar_encuesta.php on line 21.
+ 1 APPPATH/Views/encuesta/aplicar_encuesta.php(21): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/run/media/degante/DEVELOPMENT/dev/encuesta/app/Views/encuesta/aplicar_encuesta.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/EncuestaController.php(144): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\EncuestaController->aplicarEncuesta()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 23:15:40 --> Undefined variable $encuesta
+in APPPATH/Views/encuesta/aplicar_encuesta.php on line 7.
+ 1 APPPATH/Views/encuesta/aplicar_encuesta.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/run/media/degante/DEVELOPMENT/dev/encuesta/app/Views/encuesta/aplicar_encuesta.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/EncuestaController.php(144): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\EncuestaController->aplicarEncuesta()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 23:15:50 --> Undefined variable $encuesta
+in APPPATH/Views/encuesta/aplicar_encuesta.php on line 8.
+ 1 APPPATH/Views/encuesta/aplicar_encuesta.php(8): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/run/media/degante/DEVELOPMENT/dev/encuesta/app/Views/encuesta/aplicar_encuesta.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/EncuestaController.php(144): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\EncuestaController->aplicarEncuesta()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 23:19:16 --> Undefined variable $encuesta
+in APPPATH/Views/encuesta/aplicar_encuesta.php on line 7.
+ 1 APPPATH/Views/encuesta/aplicar_encuesta.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/run/media/degante/DEVELOPMENT/dev/encuesta/app/Views/encuesta/aplicar_encuesta.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/EncuestaController.php(144): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\EncuestaController->aplicarEncuesta()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 23:19:48 --> Undefined array key "opcion"
+in APPPATH/Views/encuesta/aplicar_encuesta.php on line 21.
+ 1 APPPATH/Views/encuesta/aplicar_encuesta.php(21): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/run/media/degante/DEVELOPMENT/dev/encuesta/app/Views/encuesta/aplicar_encuesta.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/EncuestaController.php(144): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\EncuestaController->aplicarEncuesta()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 23:20:25 --> Undefined array key "pregunta_id"
+in APPPATH/Views/encuesta/aplicar_encuesta.php on line 21.
+ 1 APPPATH/Views/encuesta/aplicar_encuesta.php(21): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/run/media/degante/DEVELOPMENT/dev/encuesta/app/Views/encuesta/aplicar_encuesta.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/EncuestaController.php(144): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\EncuestaController->aplicarEncuesta()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 23:21:57 --> Undefined variable $opciones
+in APPPATH/Views/encuesta/aplicar_encuesta.php on line 21.
+ 1 APPPATH/Views/encuesta/aplicar_encuesta.php(21): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/run/media/degante/DEVELOPMENT/dev/encuesta/app/Views/encuesta/aplicar_encuesta.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/EncuestaController.php(144): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\EncuestaController->aplicarEncuesta()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 23:22:26 --> Undefined variable $respuesta
+in APPPATH/Views/encuesta/aplicar_encuesta.php on line 21.
+ 1 APPPATH/Views/encuesta/aplicar_encuesta.php(21): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/run/media/degante/DEVELOPMENT/dev/encuesta/app/Views/encuesta/aplicar_encuesta.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/EncuestaController.php(144): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\EncuestaController->aplicarEncuesta()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 23:24:09 --> Undefined variable $encuesta
+in APPPATH/Views/encuesta/aplicar_encuesta.php on line 7.
+ 1 APPPATH/Views/encuesta/aplicar_encuesta.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/run/media/degante/DEVELOPMENT/dev/encuesta/app/Views/encuesta/aplicar_encuesta.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/EncuestaController.php(144): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\EncuestaController->aplicarEncuesta()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 23:26:18 --> Undefined array key "nombre"
+in APPPATH/Views/encuesta/aplicar_encuesta.php on line 7.
+ 1 APPPATH/Views/encuesta/aplicar_encuesta.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/run/media/degante/DEVELOPMENT/dev/encuesta/app/Views/encuesta/aplicar_encuesta.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/EncuestaController.php(153): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\EncuestaController->aplicarEncuesta()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 23:26:39 --> Undefined array key "tipo"
+in APPPATH/Views/encuesta/aplicar_encuesta.php on line 19.
+ 1 APPPATH/Views/encuesta/aplicar_encuesta.php(19): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/run/media/degante/DEVELOPMENT/dev/encuesta/app/Views/encuesta/aplicar_encuesta.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/EncuestaController.php(153): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\EncuestaController->aplicarEncuesta()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 23:31:40 --> Cannot redeclare App\Controllers\EncuestaController::guardarRespuestas()
+in APPPATH/Controllers/EncuestaController.php on line 163.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2023-10-18 23:32:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 23:33:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 23:33:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-10-18 23:33:43 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\UsuarioController::$session is deprecated in APPPATH/Controllers/Admin/UsuarioController.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Admin\UsuarioController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+ERROR - 2023-10-18 23:44:43 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`upn212encuesta`.`opciones`, CONSTRAINT `opciones_ibfk_1` FOREIGN KEY (`pregunta_id`) REFERENCES `preguntas` (`id`)) in /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query()
+#4 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /run/media/degante/DEVELOPMENT/dev/encuesta/system/BaseModel.php(1080): CodeIgniter\Model->doDelete()
+#6 /run/media/degante/DEVELOPMENT/dev/encuesta/app/Controllers/PreguntaController.php(109): CodeIgniter\BaseModel->delete()
+#7 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(919): App\Controllers\PreguntaController->delete()
+#8 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+#9 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#10 /run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+CRITICAL - 2023-10-18 23:44:43 --> Cannot delete or update a parent row: a foreign key constraint fails (`upn212encuesta`.`opciones`, CONSTRAINT `opciones_ibfk_1` FOREIGN KEY (`pregunta_id`) REFERENCES `preguntas` (`id`))
+in SYSTEMPATH/Database/BaseConnection.php on line 646.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete()
+ 4 APPPATH/Controllers/PreguntaController.php(109): CodeIgniter\BaseModel->delete()
+ 5 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->delete()
+ 6 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+ERROR - 2023-10-18 23:45:03 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`upn212encuesta`.`opciones`, CONSTRAINT `opciones_ibfk_1` FOREIGN KEY (`pregunta_id`) REFERENCES `preguntas` (`id`)) in /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query()
+#4 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /run/media/degante/DEVELOPMENT/dev/encuesta/system/BaseModel.php(1080): CodeIgniter\Model->doDelete()
+#6 /run/media/degante/DEVELOPMENT/dev/encuesta/app/Controllers/PreguntaController.php(109): CodeIgniter\BaseModel->delete()
+#7 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(919): App\Controllers\PreguntaController->delete()
+#8 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+#9 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#10 /run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+CRITICAL - 2023-10-18 23:45:03 --> Cannot delete or update a parent row: a foreign key constraint fails (`upn212encuesta`.`opciones`, CONSTRAINT `opciones_ibfk_1` FOREIGN KEY (`pregunta_id`) REFERENCES `preguntas` (`id`))
+in SYSTEMPATH/Database/BaseConnection.php on line 646.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete()
+ 4 APPPATH/Controllers/PreguntaController.php(109): CodeIgniter\BaseModel->delete()
+ 5 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->delete()
+ 6 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 23:46:02 --> Too few arguments to function App\Controllers\PreguntaController::delete(), 1 passed in /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php on line 919 and exactly 2 expected
+in APPPATH/Controllers/PreguntaController.php on line 90.
+ 1 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->delete()
+ 2 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 23:46:31 --> Too few arguments to function App\Controllers\PreguntaController::delete(), 1 passed in /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php on line 919 and exactly 2 expected
+in APPPATH/Controllers/PreguntaController.php on line 90.
+ 1 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->delete()
+ 2 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-18 23:46:37 --> Too few arguments to function App\Controllers\PreguntaController::delete(), 1 passed in /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php on line 919 and exactly 2 expected
+in APPPATH/Controllers/PreguntaController.php on line 90.
+ 1 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->delete()
+ 2 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+ERROR - 2023-10-18 23:47:38 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`upn212encuesta`.`opciones`, CONSTRAINT `opciones_ibfk_1` FOREIGN KEY (`pregunta_id`) REFERENCES `preguntas` (`id`)) in /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query()
+#4 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /run/media/degante/DEVELOPMENT/dev/encuesta/system/BaseModel.php(1080): CodeIgniter\Model->doDelete()
+#6 /run/media/degante/DEVELOPMENT/dev/encuesta/app/Controllers/PreguntaController.php(94): CodeIgniter\BaseModel->delete()
+#7 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(919): App\Controllers\PreguntaController->delete()
+#8 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+#9 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#10 /run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+CRITICAL - 2023-10-18 23:47:38 --> Cannot delete or update a parent row: a foreign key constraint fails (`upn212encuesta`.`opciones`, CONSTRAINT `opciones_ibfk_1` FOREIGN KEY (`pregunta_id`) REFERENCES `preguntas` (`id`))
+in SYSTEMPATH/Database/BaseConnection.php on line 646.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete()
+ 4 APPPATH/Controllers/PreguntaController.php(94): CodeIgniter\BaseModel->delete()
+ 5 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->delete()
+ 6 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+ERROR - 2023-10-18 23:48:35 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`upn212encuesta`.`opciones`, CONSTRAINT `opciones_ibfk_1` FOREIGN KEY (`pregunta_id`) REFERENCES `preguntas` (`id`)) in /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query()
+#4 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /run/media/degante/DEVELOPMENT/dev/encuesta/system/BaseModel.php(1080): CodeIgniter\Model->doDelete()
+#6 /run/media/degante/DEVELOPMENT/dev/encuesta/app/Controllers/PreguntaController.php(94): CodeIgniter\BaseModel->delete()
+#7 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(919): App\Controllers\PreguntaController->delete()
+#8 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+#9 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#10 /run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+CRITICAL - 2023-10-18 23:48:35 --> Cannot delete or update a parent row: a foreign key constraint fails (`upn212encuesta`.`opciones`, CONSTRAINT `opciones_ibfk_1` FOREIGN KEY (`pregunta_id`) REFERENCES `preguntas` (`id`))
+in SYSTEMPATH/Database/BaseConnection.php on line 646.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete()
+ 4 APPPATH/Controllers/PreguntaController.php(94): CodeIgniter\BaseModel->delete()
+ 5 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->delete()
+ 6 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+ERROR - 2023-10-18 23:53:17 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`upn212encuesta`.`opciones`, CONSTRAINT `opciones_ibfk_1` FOREIGN KEY (`pregunta_id`) REFERENCES `preguntas` (`id`)) in /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query()
+#4 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /run/media/degante/DEVELOPMENT/dev/encuesta/system/BaseModel.php(1080): CodeIgniter\Model->doDelete()
+#6 /run/media/degante/DEVELOPMENT/dev/encuesta/app/Controllers/PreguntaController.php(109): CodeIgniter\BaseModel->delete()
+#7 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(919): App\Controllers\PreguntaController->delete()
+#8 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+#9 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#10 /run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+CRITICAL - 2023-10-18 23:53:17 --> Cannot delete or update a parent row: a foreign key constraint fails (`upn212encuesta`.`opciones`, CONSTRAINT `opciones_ibfk_1` FOREIGN KEY (`pregunta_id`) REFERENCES `preguntas` (`id`))
+in SYSTEMPATH/Database/BaseConnection.php on line 646.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete()
+ 4 APPPATH/Controllers/PreguntaController.php(109): CodeIgniter\BaseModel->delete()
+ 5 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->delete()
+ 6 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+ERROR - 2023-10-18 23:58:38 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`upn212encuesta`.`respuestas`, CONSTRAINT `respuestas_ibfk_2` FOREIGN KEY (`pregunta_id`) REFERENCES `preguntas` (`id`)) in /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query()
+#4 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /run/media/degante/DEVELOPMENT/dev/encuesta/system/BaseModel.php(1080): CodeIgniter\Model->doDelete()
+#6 /run/media/degante/DEVELOPMENT/dev/encuesta/app/Controllers/PreguntaController.php(109): CodeIgniter\BaseModel->delete()
+#7 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(919): App\Controllers\PreguntaController->delete()
+#8 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+#9 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#10 /run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+CRITICAL - 2023-10-18 23:58:38 --> Cannot delete or update a parent row: a foreign key constraint fails (`upn212encuesta`.`respuestas`, CONSTRAINT `respuestas_ibfk_2` FOREIGN KEY (`pregunta_id`) REFERENCES `preguntas` (`id`))
+in SYSTEMPATH/Database/BaseConnection.php on line 646.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete()
+ 4 APPPATH/Controllers/PreguntaController.php(109): CodeIgniter\BaseModel->delete()
+ 5 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->delete()
+ 6 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+ERROR - 2023-10-18 23:58:41 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`upn212encuesta`.`respuestas`, CONSTRAINT `respuestas_ibfk_2` FOREIGN KEY (`pregunta_id`) REFERENCES `preguntas` (`id`)) in /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query()
+#4 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /run/media/degante/DEVELOPMENT/dev/encuesta/system/BaseModel.php(1080): CodeIgniter\Model->doDelete()
+#6 /run/media/degante/DEVELOPMENT/dev/encuesta/app/Controllers/PreguntaController.php(109): CodeIgniter\BaseModel->delete()
+#7 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(919): App\Controllers\PreguntaController->delete()
+#8 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+#9 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#10 /run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+CRITICAL - 2023-10-18 23:58:41 --> Cannot delete or update a parent row: a foreign key constraint fails (`upn212encuesta`.`respuestas`, CONSTRAINT `respuestas_ibfk_2` FOREIGN KEY (`pregunta_id`) REFERENCES `preguntas` (`id`))
+in SYSTEMPATH/Database/BaseConnection.php on line 646.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete()
+ 4 APPPATH/Controllers/PreguntaController.php(109): CodeIgniter\BaseModel->delete()
+ 5 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->delete()
+ 6 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+ERROR - 2023-10-18 23:58:44 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`upn212encuesta`.`respuestas`, CONSTRAINT `respuestas_ibfk_2` FOREIGN KEY (`pregunta_id`) REFERENCES `preguntas` (`id`)) in /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query()
+#4 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /run/media/degante/DEVELOPMENT/dev/encuesta/system/BaseModel.php(1080): CodeIgniter\Model->doDelete()
+#6 /run/media/degante/DEVELOPMENT/dev/encuesta/app/Controllers/PreguntaController.php(109): CodeIgniter\BaseModel->delete()
+#7 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(919): App\Controllers\PreguntaController->delete()
+#8 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+#9 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#10 /run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+CRITICAL - 2023-10-18 23:58:44 --> Cannot delete or update a parent row: a foreign key constraint fails (`upn212encuesta`.`respuestas`, CONSTRAINT `respuestas_ibfk_2` FOREIGN KEY (`pregunta_id`) REFERENCES `preguntas` (`id`))
+in SYSTEMPATH/Database/BaseConnection.php on line 646.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete()
+ 4 APPPATH/Controllers/PreguntaController.php(109): CodeIgniter\BaseModel->delete()
+ 5 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->delete()
+ 6 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+ERROR - 2023-10-18 23:59:16 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`upn212encuesta`.`respuestas`, CONSTRAINT `respuestas_ibfk_2` FOREIGN KEY (`pregunta_id`) REFERENCES `preguntas` (`id`)) in /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query()
+#4 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /run/media/degante/DEVELOPMENT/dev/encuesta/system/BaseModel.php(1080): CodeIgniter\Model->doDelete()
+#6 /run/media/degante/DEVELOPMENT/dev/encuesta/app/Controllers/PreguntaController.php(109): CodeIgniter\BaseModel->delete()
+#7 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(919): App\Controllers\PreguntaController->delete()
+#8 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+#9 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#10 /run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+CRITICAL - 2023-10-18 23:59:16 --> Cannot delete or update a parent row: a foreign key constraint fails (`upn212encuesta`.`respuestas`, CONSTRAINT `respuestas_ibfk_2` FOREIGN KEY (`pregunta_id`) REFERENCES `preguntas` (`id`))
+in SYSTEMPATH/Database/BaseConnection.php on line 646.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete()
+ 4 APPPATH/Controllers/PreguntaController.php(109): CodeIgniter\BaseModel->delete()
+ 5 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\PreguntaController->delete()
+ 6 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
