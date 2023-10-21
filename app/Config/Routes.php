@@ -7,7 +7,12 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Home::index');
+
+$routes->get('registro', 'RegistroController::new');
+$routes->post('registro', 'RegistroController::create');
+
 $routes->match(['get', 'post'], 'login', 'UserController::login', ["filter" => "noauth"]);
+
 
 
 
@@ -17,12 +22,14 @@ $routes->get('/encuesta/create', 'EncuestaController::create');
 $routes->post('/encuesta', 'EncuestaController::store');
 $routes->get('/encuesta/edit/(:num)', 'EncuestaController::edit/$1');
 $routes->put('/encuesta/(:num)', 'EncuestaController::update/$1');
-$routes->delete('/encuesta/(:num)', 'EncuestaController::delete/$1');
+// $routes->delete('encuesta/delete/(:num)', 'EncuestaController::delete/$1');
+$routes->get('encuesta/delete/(:num)', 'EncuestaController::delete/$1');
 
 $routes->get('encuesta/preguntas/(:num)', 'EncuestaController::preguntas/$1');
 
 $routes->get('encuesta/aplicar/(:num)', 'EncuestaController::aplicarEncuesta/$1');
 $routes->post('encuesta/guardar_respuestas/(:num)', 'EncuestaController::guardarRespuestas/$1');
+$routes->get('encuesta/asignar_encuesta/(:num)', 'EncuestaController::asignarEncuesta/$1');
 
 
 
@@ -108,7 +115,7 @@ $routes->group('docente', ['filter' => 'auth'], function ($routes) {
 });
 
 $routes->group('alumno', ['filter' => 'auth'], function ($routes) {
-    $routes->get('/', 'Alumno\DocenteController::index');
+    $routes->get('/', 'Alumno\AlumnoController::index');
 });
 
 

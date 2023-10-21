@@ -14,23 +14,18 @@ class EncuestaController extends BaseController
 
     public function mostrarEncuesta($encuestaId)
     {
-        // Cargar el modelo de la encuesta y obtener información de la encuesta
         $encuestaModel = new EncuestaModel();
         $encuesta = $encuestaModel->find($encuestaId);
 
         if (empty($encuesta)) {
-            // Manejo de errores si la encuesta no se encuentra
             return "La encuesta no existe.";
         }
 
-        // Cargar el modelo de preguntas y obtener las preguntas para la encuesta
         $preguntaModel = new PreguntaModel();
         $preguntas = $preguntaModel->where('encuesta_id', $encuestaId)->findAll();
 
-        // Cargar el modelo de opciones de respuesta
         $opcionModel = new OpcionModel();
 
-        // Cargar la vista de la encuesta y pasar los datos a la vista
         return view('encuesta/encuesta', [
             'encuesta' => $encuesta,
             'preguntas' => $preguntas,
@@ -40,9 +35,9 @@ class EncuestaController extends BaseController
 
     public function guardarRespuestas2($encuestaId)
     {
-        // Procesar las respuestas del formulario
+        $this->session = \Config\Services::session();
+
         if ($this->request->getMethod() === 'post') {
-            // Validar y guardar las respuestas en la base de datos
             $respuestaModel = new RespuestaModel();
             $encuestadoNombre = $this->request->getVar('encuestado_nombre');
 
@@ -100,10 +95,22 @@ class EncuestaController extends BaseController
 
     public function delete($id)
     {
+        // Crear un modelo para la tabla de encuestas
         $encuestaModel = new \App\Models\EncuestaModel();
+
+        // Verificar si la encuesta existe
+        $encuesta = $encuestaModel->find($id);
+
+        if (!$encuesta) {
+            return redirect()->back()->with('error', 'La encuesta no existe.');
+        }
+
+        // Eliminar la encuesta de la base de datos
         $encuestaModel->delete($id);
-        return redirect()->to('/encuesta');
+
+        return redirect()->back()->with('success', 'La encuesta ha sido eliminada correctamente.');
     }
+
 
 
     public function preguntas($encuestaId)
@@ -162,11 +169,12 @@ class EncuestaController extends BaseController
 
     public function guardarRespuestas($encuestaId)
     {
-        // Obtener datos del formulario
-        $encuestadoNombre = $this->request->getPost('encuestado_nombre');
+        $this->session = \Config\Services::session();
+
+        // $encuestadoNombre = $this->request->getPost('encuestado_nombre');
+        // $encuestadoNombre = $this->session->id;
         $respuestas = $this->request->getPost('respuesta');
 
-        // Verificar si la encuesta existe
         $encuestaModel = new \App\Models\EncuestaModel();
         $encuesta = $encuestaModel->find($encuestaId);
 
@@ -174,15 +182,14 @@ class EncuestaController extends BaseController
             return redirect()->to('/encuesta')->with('error', 'La encuesta no existe.');
         }
 
-        // Crear un modelo para las respuestas
         $respuestaModel = new \App\Models\RespuestaModel();
 
-        // Guardar las respuestas en la base de datos
         foreach ($respuestas as $preguntaId => $respuesta) {
             $data = [
                 'encuesta_id' => $encuestaId,
                 'pregunta_id' => $preguntaId,
-                'encuestado_nombre' => $encuestadoNombre,
+                // 'encuestado_nombre' => $encuestadoNombre,
+                'encuestado_nombre' => $this->session->id,
                 'respuesta' => $respuesta,
             ];
 
@@ -191,6 +198,53 @@ class EncuestaController extends BaseController
 
         return redirect()->to('/encuesta')->with('success', '¡Gracias por completar la encuesta!');
     }
+
+
+
+
+    public function asignarEncuesta()
+    {
+    // Obtener el rol seleccionado desde el formulario
+    $rol = $this->request->getPost('rol');
+
+    // Validar que se haya seleccionado un rol
+    if (empty($rol)) {
+        return redirect()->back()->with('error', 'Debes seleccionar un rol para asignar encuestas.');
+    }
+
+    // Crear un modelo para la tabla de usuarios
+    $usuarioModel = new \App\Models\UsuarioModel();
+
+    // Consultar la base de datos para encontrar usuarios con el rol seleccionado
+    $usuariosConRol = $usuarioModel->where('rol', $rol)->findAll();
+
+    // Verificar si se encontraron usuarios con el rol
+    if (empty($usuariosConRol)) {
+        return redirect()->back()->with('error', 'No se encontraron usuarios con el rol seleccionado.');
+    }
+
+    // Obtener el ID de la encuesta que se asignará (puedes obtenerlo de un formulario o de otra fuente)
+    $encuestaId = 1; // Reemplaza con el ID de la encuesta que deseas asignar
+
+    // Crear un modelo para la tabla de asignaciones
+    $asignacionModel = new \App\Models\AsignacionModel();
+
+    // Asignar la encuesta a los usuarios con el rol seleccionado
+    foreach ($usuariosConRol as $usuario) {
+        // Crear una nueva asignación
+        $nuevaAsignacion = [
+            'usuario_id' => $usuario['id'],
+            'encuesta_id' => $encuestaId,
+            // Puedes agregar más campos relevantes, como la fecha de asignación
+        ];
+
+        // Insertar la asignación en la base de datos
+        $asignacionModel->insert($nuevaAsignacion);
+    }
+
+    return redirect()->back()->with('success', 'Encuesta asignada exitosamente a los usuarios con el rol: ' . $rol);
+}
+
 
 
 

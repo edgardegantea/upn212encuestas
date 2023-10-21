@@ -108,14 +108,7 @@
                         </a>
 
                     </li>
-                    <li class="nav-item">
-                        <a href="<?= site_url('admin/usuarios'); ?>" class="nav-link">
-                            <i class="nav-icon fas fa-users"></i>
-                            <p>
-                                Usuarios
-                            </p>
-                        </a>
-                    </li>
+                    
                     
 
                 </ul>

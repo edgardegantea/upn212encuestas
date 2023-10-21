@@ -1,19 +1,26 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Crear Nueva Encuesta</title>
-</head>
-<body>
+<?= $this->extend('template/body') ?>
+
+<?= $this->section('content') ?>
+
+
 <h1>Crear Nueva Encuesta</h1>
 
+
 <form method="post" action="<?php echo site_url('encuesta'); ?>">
-    <label for="titulo">Título:</label>
-    <input type="text" name="titulo" required>
-
+    <div class="form-group">
+        <label for="titulo">Título:</label>
+        <input class="form-control" type="text" name="titulo" required>    
+    </div>
+    
+<div class="form-group">
     <label for="descripcion">Descripción:</label>
-    <textarea name="descripcion" rows="4" cols="50" required></textarea>
+    <textarea class="form-control" name="descripcion" rows="4" cols="50" required></textarea>
+</div>
 
-    <input type="submit" value="Guardar Encuesta">
+<div class="form-group">
+    <input class="btn btn-primary" type="submit" value="Guardar Encuesta">
+    </div>
 </form>
-</body>
-</html>
+
+
+<?= $this->endSection(); ?>

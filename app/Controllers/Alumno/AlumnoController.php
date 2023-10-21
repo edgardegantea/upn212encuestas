@@ -18,6 +18,6 @@ class AlumnoController extends BaseController
 
     public function index()
     {
-        echo 'Index de AlumnoController';
+        return view('alumno/dashboard');
     }
 }

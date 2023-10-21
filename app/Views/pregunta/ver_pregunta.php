@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Ver Pregunta</title>
-</head>
-<body>
+<?= $this->extend('template/body') ?>
+
+<?= $this->section('content') ?>
+
+
+
 <h1>Detalles de la Pregunta</h1>
 
 <p><strong>ID de la Pregunta:</strong> <?php echo $pregunta['id']; ?></p>
@@ -20,5 +20,6 @@
 <!-- Otros detalles de la pregunta, si es necesario -->
 
 <a href="<?php echo base_url('encuesta'); ?>">Volver a la lista de preguntas</a>
-</body>
-</html>
+
+
+<?= $this->endSection() ?>

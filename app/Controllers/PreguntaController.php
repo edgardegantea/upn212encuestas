@@ -24,7 +24,7 @@ class PreguntaController extends BaseController
         $validation->setRules([
             'encuesta_id' => 'required|numeric',
             'pregunta' => 'required',
-            'tipo' => 'required',
+            'tipo_pregunta' => 'required',
             // Agrega las reglas de validación necesarias para otros campos
         ]);
 
@@ -33,7 +33,7 @@ class PreguntaController extends BaseController
             $data = [
                 'encuesta_id' => $this->request->getPost('encuesta_id'),
                 'pregunta' => $this->request->getPost('pregunta'),
-                'tipo' => $this->request->getPost('tipo'),
+                'tipo_pregunta' => $this->request->getPost('tipo_pregunta'),
                 // Agrega otros campos de pregunta según tu base de datos
             ];
             $preguntaModel->insert($data);

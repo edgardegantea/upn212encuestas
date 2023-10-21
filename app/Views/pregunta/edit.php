@@ -1,27 +1,35 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Editar Pregunta de Encuesta</title>
-</head>
-<body>
+<?= $this->extend('template/body') ?>
+
+<?= $this->section('content') ?>
+
+
+
 <h1>Editar Pregunta de Encuesta</h1>
 
 <form method="post" action="<?php echo base_url('pregunta/update/' . $pregunta['id']); ?>">
+    
     <input type="hidden" name="pregunta_id" value="<?php echo $pregunta['id']; ?>">
     <input type="hidden" name="encuesta_id" value="<?php echo $pregunta['encuesta_id']; ?>">
 
-    <label for="pregunta">Pregunta:</label>
-    <textarea name="pregunta" rows="4" cols="50" required><?php echo $pregunta['pregunta']; ?></textarea>
+    <div class="form-group">
+        <label class="form-label" for="pregunta">Pregunta:</label>
+        <textarea class="form-control" name="pregunta" rows="4" cols="50" required><?php echo $pregunta['pregunta']; ?></textarea>
+    </div>
 
-    <label for="tipo">Tipo de Pregunta:</label>
-    <select name="tipo_pregunta">
-        <option value="seleccion_multiple" <?php echo $pregunta['tipo_pregunta'] === 'seleccion_multiple' ? 'selected' : ''; ?>>Opción Múltiple</option>
-        <option value="abierta" <?php echo $pregunta['tipo_pregunta'] === 'abierta' ? 'selected' : ''; ?>>Abierta</option>
-    </select>
+    <div class="form-group">
+        <label for="tipo">Tipo de Pregunta:</label>
+        <select class="form-control" name="tipo_pregunta">
+            <option value="seleccion_multiple" <?php echo $pregunta['tipo_pregunta'] === 'seleccion_multiple' ? 'selected' : ''; ?>>Opción Múltiple</option>
+            <option value="abierta" <?php echo $pregunta['tipo_pregunta'] === 'abierta' ? 'selected' : ''; ?>>Abierta</option>
+        </select>
+    </div>
+    
 
-    <!-- Otros campos relacionados con la pregunta, como opciones de respuesta, etc., según el tipo de pregunta -->
-
-    <input type="submit" value="Guardar Cambios">
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <input class="btn btn-primary " type="submit" value="Guardar cambios">
+    </div>
 </form>
-</body>
-</html>
+
+
+<?= $this->endSection() ?>
+

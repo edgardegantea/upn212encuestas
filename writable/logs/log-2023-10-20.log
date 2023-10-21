@@ -1,0 +1,430 @@
+INFO - 2023-10-20 20:04:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 20:05:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-20 20:05:02 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 /run/media/degante/DEVELOPMENT/dev/encuesta/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 /run/media/degante/DEVELOPMENT/dev/encuesta/app/Validation/Userrules.php(10): CodeIgniter\BaseModel->first()
+#7 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Validation/Validation.php(309): App\Validation\Userrules->validateUser()
+#8 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Validation/Validation.php(195): CodeIgniter\Validation\Validation->processRules()
+#9 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Controller.php(150): CodeIgniter\Validation\Validation->run()
+#10 /run/media/degante/DEVELOPMENT/dev/encuesta/app/Controllers/UserController.php(28): CodeIgniter\Controller->validate()
+#11 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(919): App\Controllers\UserController->login()
+#12 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+#13 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#14 /run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#15 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Commands/Server/rewrite.php(47): require_once('...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#3 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 /run/media/degante/DEVELOPMENT/dev/encuesta/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 /run/media/degante/DEVELOPMENT/dev/encuesta/app/Validation/Userrules.php(10): CodeIgniter\BaseModel->first()
+#6 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Validation/Validation.php(309): App\Validation\Userrules->validateUser()
+#7 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Validation/Validation.php(195): CodeIgniter\Validation\Validation->processRules()
+#8 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Controller.php(150): CodeIgniter\Validation\Validation->run()
+#9 /run/media/degante/DEVELOPMENT/dev/encuesta/app/Controllers/UserController.php(28): CodeIgniter\Controller->validate()
+#10 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(919): App\Controllers\UserController->login()
+#11 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+#12 /run/media/degante/DEVELOPMENT/dev/encuesta/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#13 /run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#14 /run/media/degante/DEVELOPMENT/dev/encuesta/system/Commands/Server/rewrite.php(47): require_once('...')
+#15 {main}
+CRITICAL - 2023-10-20 20:05:02 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Validation/Userrules.php(10): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/Validation/Validation.php(309): App\Validation\Userrules->validateUser()
+ 7 SYSTEMPATH/Validation/Validation.php(195): CodeIgniter\Validation\Validation->processRules()
+ 8 SYSTEMPATH/Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH/Controllers/UserController.php(28): CodeIgniter\Controller->validate()
+10 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\UserController->login()
+11 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+12 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+13 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-20 20:05:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 20:05:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 20:06:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 20:06:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 20:06:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-10-20 20:06:35 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\UsuarioController::$session is deprecated in APPPATH/Controllers/Admin/UsuarioController.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Admin\UsuarioController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-20 20:08:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-10-20 20:08:27 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\UsuarioController::$session is deprecated in APPPATH/Controllers/Admin/UsuarioController.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Admin\UsuarioController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-20 20:08:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-10-20 20:08:32 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\UsuarioController::$session is deprecated in APPPATH/Controllers/Admin/UsuarioController.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Admin\UsuarioController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-20 20:10:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-10-20 20:10:18 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\UsuarioController::$session is deprecated in APPPATH/Controllers/Admin/UsuarioController.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Admin\UsuarioController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-20 20:10:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-10-20 20:10:52 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\UsuarioController::$session is deprecated in APPPATH/Controllers/Admin/UsuarioController.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Admin\UsuarioController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-20 20:11:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-10-20 20:11:13 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\UsuarioController::$session is deprecated in APPPATH/Controllers/Admin/UsuarioController.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Admin\UsuarioController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-20 20:11:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-10-20 20:11:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\UsuarioController::$session is deprecated in APPPATH/Controllers/Admin/UsuarioController.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Admin\UsuarioController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-20 20:11:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-10-20 20:11:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\UsuarioController::$session is deprecated in APPPATH/Controllers/Admin/UsuarioController.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Admin\UsuarioController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-20 20:45:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 20:45:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 21:08:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-20 21:12:24 --> syntax error, unexpected token ";"
+in APPPATH/Views/encuesta/preguntas.php on line 53.
+ 1 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/EncuestaController.php(116): view()
+ 4 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\EncuestaController->preguntas()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-20 21:12:44 --> syntax error, unexpected token ";"
+in APPPATH/Views/encuesta/preguntas.php on line 53.
+ 1 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/EncuestaController.php(116): view()
+ 4 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\EncuestaController->preguntas()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-20 21:13:04 --> syntax error, unexpected token "?"
+in APPPATH/Views/encuesta/preguntas.php on line 53.
+ 1 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/EncuestaController.php(116): view()
+ 4 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\EncuestaController->preguntas()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-20 21:33:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 21:52:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 21:53:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 21:55:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-10-20 21:55:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\EncuestaController::$session is deprecated in APPPATH/Controllers/EncuestaController.php on line 160.
+ 1 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\EncuestaController->guardarRespuestas('1')
+ 2 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EncuestaController))
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-20 22:41:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 22:41:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-20 22:42:04 --> syntax error, unexpected identifier "redirect"
+in APPPATH/Controllers/RegistroController.php on line 33.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(877): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-20 22:43:07 --> syntax error, unexpected identifier "redirect"
+in APPPATH/Controllers/RegistroController.php on line 34.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(877): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-20 22:45:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 22:45:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-20 22:45:14 --> syntax error, unexpected identifier "redirect"
+in APPPATH/Controllers/RegistroController.php on line 34.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(877): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-20 22:45:26 --> syntax error, unexpected identifier "redirect"
+in APPPATH/Controllers/RegistroController.php on line 34.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(877): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-20 22:49:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 22:51:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 22:51:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 22:51:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 22:52:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 22:52:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 22:52:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 22:52:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 22:52:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 22:53:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 22:53:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 22:53:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:03:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:03:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:03:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:03:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:03:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:03:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:03:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:03:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:03:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:03:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:03:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:03:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:03:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:03:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:03:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:03:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:03:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:03:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:03:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:03:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:03:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:03:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:03:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:03:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:03:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:03:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:03:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:03:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:03:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:03:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:03:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:03:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:04:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:04:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-20 23:04:13 --> syntax error, unexpected identifier "redirect"
+in APPPATH/Controllers/RegistroController.php on line 34.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(877): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-20 23:04:35 --> syntax error, unexpected identifier "redirect"
+in APPPATH/Controllers/RegistroController.php on line 34.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(877): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-20 23:06:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:07:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:07:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:07:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:07:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:07:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:07:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:07:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-20 23:07:21 --> syntax error, unexpected identifier "redirect"
+in APPPATH/Controllers/RegistroController.php on line 34.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(877): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-20 23:07:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:07:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:07:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:07:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:07:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:08:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:08:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:08:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:09:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:10:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:10:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:10:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-10-20 23:10:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\UsuarioController::$session is deprecated in APPPATH/Controllers/Admin/UsuarioController.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Admin\UsuarioController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-20 23:10:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:11:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-10-20 23:11:02 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\UsuarioController::$session is deprecated in APPPATH/Controllers/Admin/UsuarioController.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Admin\UsuarioController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-20 23:11:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-10-20 23:11:16 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\UsuarioController::$session is deprecated in APPPATH/Controllers/Admin/UsuarioController.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Admin\UsuarioController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-20 23:11:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-10-20 23:11:52 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\UsuarioController::$session is deprecated in APPPATH/Controllers/Admin/UsuarioController.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Admin\UsuarioController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-20 23:11:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:12:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-10-20 23:12:01 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\UsuarioController::$session is deprecated in APPPATH/Controllers/Admin/UsuarioController.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Admin\UsuarioController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+INFO - 2023-10-20 23:12:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:12:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-20 23:12:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-20 23:12:28 --> syntax error, unexpected identifier "redirect"
+in APPPATH/Controllers/RegistroController.php on line 34.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(877): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-20 23:13:23 --> syntax error, unexpected identifier "redirect"
+in APPPATH/Controllers/RegistroController.php on line 34.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(877): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-20 23:13:52 --> syntax error, unexpected identifier "redirect"
+in APPPATH/Controllers/RegistroController.php on line 34.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(877): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-20 23:14:26 --> syntax error, unexpected identifier "redirect"
+in APPPATH/Controllers/RegistroController.php on line 35.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(877): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-20 23:15:03 --> syntax error, unexpected identifier "redirect"
+in APPPATH/Controllers/RegistroController.php on line 35.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(877): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-20 23:15:41 --> syntax error, unexpected identifier "redirect"
+in APPPATH/Controllers/RegistroController.php on line 35.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(877): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-20 23:17:54 --> syntax error, unexpected identifier "redirect"
+in APPPATH/Controllers/RegistroController.php on line 35.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(877): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-20 23:28:17 --> syntax error, unexpected identifier "redirect"
+in APPPATH/Controllers/RegistroController.php on line 36.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(877): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
+CRITICAL - 2023-10-20 23:28:19 --> syntax error, unexpected identifier "redirect"
+in APPPATH/Controllers/RegistroController.php on line 36.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(877): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/run/media/degante/DEVELOPMENT/dev/encuesta/public/index.php')
